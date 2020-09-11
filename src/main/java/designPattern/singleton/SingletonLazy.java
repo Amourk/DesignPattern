@@ -5,7 +5,14 @@ package designPattern.singleton;
  * */
 public class SingletonLazy {
 
-    private static SingletonTest singletonTest;
+    /**
+     * volatile防止指令重排
+     * 对象实例化：
+     * 1、在堆申请一块地址，给对象的成员变量赋初始值
+     * 2、调用init方法，初始化变量的值和执行构造函数
+     * 3、将对象的引用地址指向堆内存中的地址
+     * */
+    private volatile static SingletonTest singletonTest;
 
     /**
      * 1 可能会存在线程安全问题，多个线程可能会创建多个实例
