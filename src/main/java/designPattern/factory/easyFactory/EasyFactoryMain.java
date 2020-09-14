@@ -2,6 +2,7 @@ package designPattern.factory.easyFactory;
 
 /**
  * 工厂模式---简单工厂模式
+ * 违反了“闭开”原则
  * */
 public class EasyFactoryMain {
     public static void main(String[] args) {
